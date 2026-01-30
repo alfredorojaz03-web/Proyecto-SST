@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    pom.xml
+    Este archivo es el centro del proyecto Maven.
+    Aquí se definen:
+    - La versión de Java
+    - Las librerías (Hibernate, MySQL, etc.)
+    - Los plugins de compilación
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- ============================= -->
+    <!-- INFORMACIÓN BÁSICA DEL PROYECTO -->
+    <!-- ============================= -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>co.com.sst360</groupId>
+    <artifactId>proyecto-sena-hibernate</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>proyecto-sena-hibernate</name>
+
+    <!-- ============================= -->
+    <!-- CONFIGURACIÓN DE JAVA -->
+    <!-- IMPORTANTE: usamos Java 8 -->
+    <!-- ============================= -->
+    <properties>
+        <!-- Compilar como Java 8 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- Versión de Jakarta EE -->
+        <jakartaee>8.0.0</jakartaee>
+
+        <!-- Codificación -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- ============================= -->
+    <!-- DEPENDENCIAS -->
+    <!-- ============================= -->
+    <dependencies>
+
+        <!-- Jakarta EE (Servlets, JSP, etc.) -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- ============================= -->
+        <!-- Hibernate ORM -->
+        <!-- ============================= -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>7.2.2.Final</version>
+        </dependency>
+
+        <!-- ============================= -->
+        <!-- MySQL Connector JDBC -->
+        <!-- ESTA ES LA VERSIÓN CORRECTA -->
+        <!-- ============================= -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+        <!-- ============================= -->
+        <!-- Jakarta Persistence (JPA) -->
+        <!-- ============================= -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <!-- ============================= -->
+    <!-- PLUGINS DE MAVEN -->
+    <!-- ============================= -->
+    <build>
+        <plugins>
+
+            <!-- Plugin para compilar Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para generar el WAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

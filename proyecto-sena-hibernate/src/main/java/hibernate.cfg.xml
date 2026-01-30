@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!--
+    Este archivo se llama hibernate.cfg.xml
+    y es el archivo principal de configuración de Hibernate.
+
+    Aquí se indica:
+    - A qué base de datos se va a conectar el proyecto
+    - Qué usuario y contraseña usar
+    - Qué tipo de base de datos se está usando
+    - Qué clases Java se van a convertir en tablas
+-->
+<hibernate-configuration>
+
+    <!--
+        session-factory:
+        Es el componente principal de Hibernate.
+        Se encarga de crear las conexiones (sesiones)
+        entre la aplicación Java y la base de datos.
+    -->
+    <session-factory>
+
+        <!-- ============================= -->
+        <!-- CONFIGURACIÓN DE CONEXIÓN JDBC -->
+        <!-- ============================= -->
+
+        <!--
+            Driver JDBC:
+            Indica el driver que se usa para conectarse
+            a una base de datos MySQL desde Java.
+        -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <!--
+            URL de conexión:
+            Aquí se especifica:
+            - El servidor (localhost)
+            - El puerto (3306)
+            - El nombre de la base de datos
+        -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/proyecto_sena_alfred?useSSL=false&amp;serverTimezone=UTC
+        </property>
+
+        <!--
+            Usuario de la base de datos:
+            Es el usuario con el que se accede a MySQL.
+        -->
+        <property name="hibernate.connection.username">
+            alfred_user
+        </property>
+
+        <!--
+            Contraseña de la base de datos:
+            Es la clave correspondiente al usuario configurado.
+        -->
+        <property name="hibernate.connection.password">
+            8603
+        </property>
+
+        <!-- ============================= -->
+        <!-- CONFIGURACIÓN PROPIA DE HIBERNATE -->
+        <!-- ============================= -->
+
+        <!--
+            Dialecto:
+            Le indica a Hibernate qué tipo de base de datos
+            se está usando para que genere el SQL correcto.
+            En este caso, MySQL versión 8.
+        -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQL8Dialect
+        </property>
+
+        <!--
+            show_sql:
+            Permite ver en la consola las sentencias SQL
+            que Hibernate ejecuta en la base de datos.
+        -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <!--
+            format_sql:
+            Hace que las consultas SQL se muestren
+            ordenadas y más fáciles de leer.
+        -->
+        <property name="hibernate.format_sql">
+            true
+        </property>
+
+        <!--
+            hbm2ddl.auto:
+            Define qué hará Hibernate con las tablas.
+            update:
+            - Crea las tablas si no existen
+            - Actualiza la estructura sin borrar datos
+        -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- ============================= -->
+        <!-- CLASES MAPEADAS -->
+        <!-- ============================= -->
+
+        <!--
+            mapping:
+            Aquí se indica la clase Java que será
+            mapeada a una tabla en la base de datos.
+        -->
+        <mapping class="co.com.sst360.modelo.Incidente"/>
+
+    </session-factory>
+
+</hibernate-configuration>

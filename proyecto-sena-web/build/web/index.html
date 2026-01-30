@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Incidentes</title>
+</head>
+<body>
+
+    <h2>Registrar Incidente</h2>
+
+    <form action="IncidenteServlet" method="post">
+
+        <label>Tipo de evento:</label><br>
+        <input type="text" name="tipoEvento"><br><br>
+
+        <label>Código:</label><br>
+        <input type="text" name="codigo"><br><br>
+
+        <label>Lugar:</label><br>
+        <input type="text" name="lugar"><br><br>
+
+        <label>Área:</label><br>
+        <input type="text" name="area"><br><br>
+
+        <label>Descripción:</label><br>
+        <textarea name="descripcion"></textarea><br><br>
+
+        <button type="submit">Guardar</button>
+
+    </form>
+
+</body>
+</html>
