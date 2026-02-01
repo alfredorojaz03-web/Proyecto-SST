@@ -14,4 +14,16 @@ Todo el proyecto se encuentra versionado utilizando Git y GitHub, permitiendo ll
 
 Este proyecto se encuentra actualmente en proceso de desarrollo y mejora continua, y tiene un enfoque netamente académico, orientado a demostrar la aplicación de los conocimientos adquiridos en el componente de Desarrollo de Frontend con React JS y otros módulos del programa de formación.
 
-Autor: Alfredo Arregocés 
+
+## Testing de la API con Postman
+
+Se realizó el testing de la API desarrollada para el proyecto de Seguridad y Salud en el Trabajo (SST) utilizando la herramienta Postman.
+
+Para la ejecución del testing, se verificó previamente el correcto despliegue del proyecto en el servidor Apache Tomcat y la disponibilidad de los endpoints definidos en la aplicación.
+
+Se realizaron pruebas exitosas de los métodos GET y POST, validando la correcta comunicación entre el cliente (Postman) y el servidor, así como el procesamiento y almacenamiento de la información enviada.
+
+El testing permitió confirmar el correcto funcionamiento de la API y el cumplimiento de los requerimientos establecidos para el registro de incidentes en el sistema SST.
+
+
+Aprendiz: Alfredo Arregocés 
