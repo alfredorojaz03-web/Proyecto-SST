@@ -1,29 +1,109 @@
-# Proyecto SST - SENA
+# Proyecto Web SENA – Aplicación SST
 
-Este repositorio contiene el desarrollo de un proyecto académico correspondiente a un Sistema de Seguridad y Salud en el Trabajo (SST), realizado como parte del proceso formativo del programa Análisis y Desarrollo de Software del SENA. El propósito de este proyecto es aplicar de manera práctica los conocimientos adquiridos durante la formación, relacionados con el análisis, diseño y desarrollo de software.
+**Aprendiz:** Alfredo Arregocés  
 
-El proyecto se encuentra organizado en diferentes carpetas que representan los distintos módulos y tecnologías trabajadas a lo largo del proceso. Dentro del repositorio se incluyen desarrollos de frontend, backend y proyectos web, los cuales sirven como base para la construcción progresiva del sistema SST.
+---
 
-En la carpeta frontend se encuentra el desarrollo de la interfaz de usuario. Allí se incluyen archivos creados con HTML, CSS y JavaScript, así como un proyecto más avanzado desarrollado con React JS, ubicado en la ruta frontend/sst-react. Este proyecto React fue creado utilizando Create React App y permite visualizar una interfaz básica del sistema SST, ejecutándose en un entorno local mediante el navegador en la dirección localhost:3000.
+## ¿De qué se trata este proyecto?
+Este proyecto es una aplicación web sencilla para el Sistema de Gestión de Seguridad y Salud en el Trabajo (SST).  
+Fue desarrollada como parte de los talleres del programa **Tecnología de Análisis y Desarrollo de Software** otorgada por el SENA.
 
-El proyecto React puede ejecutarse ingresando desde la terminal a la carpeta frontend/sst-react y ejecutando los comandos npm install (en caso de que las dependencias no estén instaladas) y npm start, lo cual inicia el servidor de desarrollo y permite visualizar la aplicación en el navegador.
-
-Adicionalmente, el repositorio contiene carpetas correspondientes al backend del sistema, desarrolladas en Java, junto con una estructura inicial que utiliza Hibernate para el manejo de la persistencia de datos. También se incluye un proyecto web basado en tecnologías como JSP y Servlets, lo cual evidencia el avance del sistema utilizando diferentes enfoques vistos durante la formación.
-
-Todo el proyecto se encuentra versionado utilizando Git y GitHub, permitiendo llevar un control de los cambios realizados
-
-Este proyecto se encuentra actualmente en proceso de desarrollo y mejora continua, y tiene un enfoque netamente académico, orientado a demostrar la aplicación de los conocimientos adquiridos en el componente de Desarrollo de Frontend con React JS y otros módulos del programa de formación.
+La aplicación permite registrar incidentes SST a través de un formulario y guardar la información en una base de datos, integrando los diferentes módulos del sistema.
 
 
-## Testing de la API con Postman
+Este proyecto hace parte de las guías de aprendizaje GA7 y GA8 de la fase ejecución en la plataforma Zajuna
 
-Se realizó el testing de la API desarrollada para el proyecto de Seguridad y Salud en el Trabajo (SST) utilizando la herramienta Postman.
+---
 
-Para la ejecución del testing, se verificó previamente el correcto despliegue del proyecto en el servidor Apache Tomcat y la disponibilidad de los endpoints definidos en la aplicación.
+## Objetivo del proyecto
+Aprender a desarrollar una aplicación web básica, organizada por módulos, donde se integren formularios, servlets, clases Java y base de datos, aplicando lo visto durante la formación.
 
-Se realizaron pruebas exitosas de los métodos GET y POST, validando la correcta comunicación entre el cliente (Postman) y el servidor, así como el procesamiento y almacenamiento de la información enviada.
+---
 
-El testing permitió confirmar el correcto funcionamiento de la API y el cumplimiento de los requerimientos establecidos para el registro de incidentes en el sistema SST.
+## ¿Qué hace el sistema?
+El sistema permite:
+- Registrar incidentes SST desde un formulario web.
+- Enviar la información al servidor.
+- Guardar los datos en una base de datos.
+- Mostrar un mensaje de respuesta al usuario.
+
+---
+
+## ¿Cómo está organizado el proyecto?
+El proyecto está organizado en paquetes para que sea más fácil de entender y mantener:
+
+- **modelo:** contiene las clases que representan la información del sistema.
+- **dao:** contiene las clases que se encargan de guardar los datos en la base de datos.
+- **servlet:** contiene los servlets que reciben la información del formulario.
+- **util:** contiene clases de apoyo como la conexión a la base de datos.
+- **web:** contiene las páginas HTML y JSP que ve el usuario.
+
+Esta organización permite que cada parte del sistema cumpla una función específica.
+
+---
+
+## Integración de los módulos
+Los módulos del sistema trabajan de la siguiente forma:
+
+1. El usuario ingresa a la página web.
+2. Diligencia el formulario de incidentes.
+3. El servlet recibe la información.
+4. La información se envía al DAO.
+5. El DAO guarda los datos en la base de datos.
+6. El sistema muestra un mensaje de resultado al usuario.
+
+De esta manera se demuestra que los módulos están integrados y funcionando correctamente.
+
+---
+
+## Tecnologías utilizadas
+Para el desarrollo del proyecto se utilizaron las siguientes herramientas:
+- Lenguaje de programación: Java
+- IDE: NetBeans
+- Servidor de aplicaciones: Apache Tomcat
+- Base de datos: MySQL
+- Tecnologías web: HTML y JSP
+- Control de versiones: Git y GitHub
+
+---
+
+## ¿Cómo ejecutar el proyecto?
+Para ejecutar el proyecto se deben seguir estos pasos:
+1. Descargar o clonar el repositorio desde GitHub.
+2. Abrir el proyecto en NetBeans.
+3. Configurar Apache Tomcat como servidor.
+4. Ejecutar el proyecto.
+5. Acceder a la aplicación desde el navegador.
+
+---
+
+## Pruebas realizadas
+Se realizaron pruebas básicas para verificar:
+- El envío de datos desde el formulario.
+- La correcta integración entre el servlet y la base de datos.
+- El almacenamiento de la información.
+- La respuesta del sistema al usuario.
+
+Las pruebas fueron satisfactorias.
+
+---
+
+## Control de versiones
+El proyecto se encuentra almacenado en GitHub, lo que me permite llevar un control de los cambios realizados durante el desarrollo.
 
 
-Aprendiz: Alfredo Arregocés 
+---
+
+## Ambiente de desarrollo
+- Sistema operativo: Windows
+- IDE: NetBeans
+- Servidor web: Apache Tomcat
+- Base de datos: MySQL
+- JDK: Java Development Kit
+
+---
+
+## Conclusión
+Con el desarrollo de este proyecto se logró integrar los diferentes módulos de una aplicación web básica, aplicando los conocimientos adquiridos durante la formación.  
+El sistema funciona correctamente y cumple con los requisitos solicitados.
+
